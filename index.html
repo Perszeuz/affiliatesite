@@ -1,0 +1,2358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EasyGold24 - Earn long-term with gold through our affiliate program. Instant payouts, lucrative commissions, try free for 90 days.">
+  <title>EasyGold24 - Earn with Gold | Affiliate Program</title>
+  <style>
+    /* Design System */
+    :root {
+      /* Primary Colors */
+      --color-gold: #D4AF37;
+      --color-gold-hover: #C19B2E;
+      --color-gold-active: #B08C25;
+      --color-navy: #1A1F2E;
+      --color-white: #FFFFFF;
+      --color-green: #2D7A6F;
+      --color-light-bg: #F8F7F4;
+      --color-text-dark: #2C2C2C;
+      --color-text-light: #E8E8E8;
+      --color-gray-subtle: #E8E7E3;
+      --color-gray-border: #D0CFC9;
+      
+      /* Semantic Colors */
+      --bg-primary: var(--color-light-bg);
+      --bg-secondary: var(--color-white);
+      --bg-dark: var(--color-navy);
+      --text-primary: var(--color-text-dark);
+      --text-secondary: #5A5A5A;
+      --border-color: var(--color-gray-border);
+      
+      /* Typography */
+      --font-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      --font-weight-normal: 400;
+      --font-weight-medium: 500;
+      --font-weight-semibold: 600;
+      --font-weight-bold: 700;
+      
+      /* Spacing */
+      --space-xs: 0.5rem;
+      --space-sm: 1rem;
+      --space-md: 1.5rem;
+      --space-lg: 2rem;
+      --space-xl: 3rem;
+      --space-2xl: 4rem;
+      --space-3xl: 6rem;
+      
+      /* Border Radius */
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      
+      /* Shadows */
+      --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+      --shadow-gold: 0 4px 16px rgba(212, 175, 55, 0.25);
+      
+      /* Transitions */
+      --transition-fast: 150ms ease;
+      --transition-normal: 250ms ease;
+    }
+    
+    /* Dark Mode */
+    [data-color-scheme="dark"] {
+      --bg-primary: #0F1419;
+      --bg-secondary: var(--color-navy);
+      --bg-dark: #000000;
+      --text-primary: var(--color-text-light);
+      --text-secondary: #B0B0B0;
+      --border-color: #3A3F4F;
+      --color-gray-subtle: #2A2F3F;
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-primary: #0F1419;
+        --bg-secondary: var(--color-navy);
+        --bg-dark: #000000;
+        --text-primary: var(--color-text-light);
+        --text-secondary: #B0B0B0;
+        --border-color: #3A3F4F;
+        --color-gray-subtle: #2A2F3F;
+      }
+    }
+    
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: var(--font-base);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background-color: var(--bg-primary);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+    
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+    }
+    
+    .container-wide {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+    }
+    
+    /* Header */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-color);
+      padding: var(--space-sm) 0;
+      transition: box-shadow var(--transition-normal);
+    }
+    
+    .header.scrolled {
+      box-shadow: var(--shadow-md);
+    }
+    
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-lg);
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: var(--font-weight-bold);
+      color: var(--color-gold);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      fill: var(--color-gold);
+    }
+    
+    .nav {
+      display: none;
+      gap: var(--space-lg);
+    }
+    
+    .nav a {
+      font-weight: var(--font-weight-medium);
+      color: var(--text-primary);
+      transition: color var(--transition-fast);
+      position: relative;
+    }
+    
+    .nav a:hover {
+      color: var(--color-gold);
+    }
+    
+    .nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--color-gold);
+      transition: width var(--transition-normal);
+    }
+    
+    .nav a:hover::after {
+      width: 100%;
+    }
+    
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+    
+    .theme-toggle {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-md);
+      background: var(--color-gray-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition-fast);
+    }
+    
+    .theme-toggle:hover {
+      background: var(--color-gold);
+    }
+    
+    .theme-toggle svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--text-primary);
+    }
+    
+    .mobile-menu-toggle {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      padding: 8px;
+    }
+    
+    .mobile-menu-toggle span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: var(--text-primary);
+      transition: all var(--transition-normal);
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+    
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-color);
+      padding: var(--space-md);
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+    
+    .mobile-menu.active {
+      display: flex;
+    }
+    
+    .mobile-menu a {
+      padding: var(--space-sm);
+      font-weight: var(--font-weight-medium);
+      color: var(--text-primary);
+      border-radius: var(--radius-sm);
+      transition: background var(--transition-fast);
+    }
+    
+    .mobile-menu a:hover {
+      background: var(--color-gray-subtle);
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--color-light-bg) 100%);
+      padding: var(--space-3xl) 0 var(--space-2xl);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    [data-color-scheme="dark"] .hero {
+      background: linear-gradient(135deg, var(--bg-secondary) 0%, #1A1F2E 100%);
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(5deg); }
+    }
+    
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: var(--font-weight-bold);
+      line-height: 1.2;
+      margin-bottom: var(--space-md);
+      color: var(--text-primary);
+    }
+    
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      margin-bottom: var(--space-xl);
+      line-height: 1.5;
+    }
+    
+    .hero-highlight {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-size: 0.95rem;
+      color: var(--color-green);
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: var(--space-lg);
+    }
+    
+    .hero-highlight::before,
+    .hero-highlight::after {
+      content: '•';
+      color: var(--color-gold);
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: var(--color-gold);
+      color: var(--color-white);
+      padding: 1rem 2.5rem;
+      border-radius: var(--radius-lg);
+      font-size: 1.125rem;
+      font-weight: var(--font-weight-semibold);
+      transition: all var(--transition-normal);
+      box-shadow: var(--shadow-gold);
+    }
+    
+    .cta-button:hover {
+      background: var(--color-gold-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
+    }
+    
+    .cta-button:active {
+      transform: translateY(0);
+    }
+    
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-lg);
+      flex-wrap: wrap;
+      margin-top: var(--space-xl);
+    }
+    
+    .badge {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      padding: var(--space-xs) var(--space-md);
+      background: var(--bg-secondary);
+      border-radius: var(--radius-md);
+      font-size: 0.875rem;
+      font-weight: var(--font-weight-medium);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+    }
+    
+    .badge svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--color-gold);
+    }
+    
+    /* Section Styles */
+    .section {
+      padding: var(--space-3xl) 0;
+    }
+    
+    .section-dark {
+      background: var(--bg-dark);
+    }
+    
+    .section-light {
+      background: var(--bg-secondary);
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: var(--space-2xl);
+    }
+    
+    .section-title {
+      font-size: 2.25rem;
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--space-sm);
+      color: var(--text-primary);
+    }
+    
+    .section-dark .section-title,
+    .section-dark .section-description {
+      color: var(--color-white);
+    }
+    
+    .section-description {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* Value Proposition Cards */
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-lg);
+    }
+    
+    .value-card {
+      background: var(--bg-secondary);
+      padding: var(--space-xl);
+      border-radius: var(--radius-lg);
+      border: 2px solid var(--border-color);
+      transition: all var(--transition-normal);
+    }
+    
+    .value-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--color-gold);
+    }
+    
+    .value-icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--color-gold) 0%, #B08C25 100%);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space-md);
+    }
+    
+    .value-icon svg {
+      width: 28px;
+      height: 28px;
+      fill: var(--color-white);
+    }
+    
+    .value-card h3 {
+      font-size: 1.25rem;
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: var(--space-sm);
+      color: var(--text-primary);
+    }
+    
+    .value-card p {
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    
+    /* User Types Section */
+    .user-types {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-lg);
+    }
+    
+    .user-type-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: var(--space-xl);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all var(--transition-normal);
+      cursor: pointer;
+    }
+    
+    .user-type-card:hover {
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-4px);
+    }
+    
+    .user-type-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--color-gold);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space-md);
+    }
+    
+    .user-type-icon svg {
+      width: 32px;
+      height: 32px;
+      fill: var(--color-white);
+    }
+    
+    .user-type-card h3 {
+      font-size: 1.125rem;
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: var(--space-sm);
+      color: var(--color-white);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .user-type-card p {
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.6;
+    }
+    
+    /* Commission Structure */
+    .commission-pyramid {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .commission-level {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-md);
+      margin-bottom: var(--space-sm);
+      border-radius: var(--radius-md);
+      font-weight: var(--font-weight-semibold);
+      transition: all var(--transition-normal);
+      position: relative;
+    }
+    
+    .commission-level:hover {
+      transform: translateX(8px);
+    }
+    
+    .commission-level.recruiting {
+      background: linear-gradient(135deg, var(--color-gold) 0%, #B08C25 100%);
+      color: var(--color-white);
+      box-shadow: var(--shadow-gold);
+      font-size: 1.125rem;
+    }
+    
+    .commission-level.level-1 {
+      background: var(--color-gold);
+      color: var(--color-white);
+      width: 100%;
+    }
+    
+    .commission-level.level-2 {
+      background: var(--color-green);
+      color: var(--color-white);
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .commission-level.level-3 {
+      background: #4A90E2;
+      color: var(--color-white);
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .commission-level.level-5 {
+      background: #9B59B6;
+      color: var(--color-white);
+      width: 55%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .commission-label {
+      flex: 1;
+      text-align: center;
+    }
+    
+    .commission-percentage {
+      font-size: 1.5rem;
+      font-weight: var(--font-weight-bold);
+    }
+    
+    .commission-note {
+      text-align: center;
+      margin-top: var(--space-lg);
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    
+    /* Starter Package */
+    .package-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+    
+    .package-item {
+      background: var(--bg-secondary);
+      padding: var(--space-md);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      text-align: center;
+      transition: all var(--transition-normal);
+    }
+    
+    .package-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-gold);
+    }
+    
+    .package-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto var(--space-sm);
+      background: linear-gradient(135deg, var(--color-gold) 0%, #B08C25 100%);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .package-icon svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--color-white);
+    }
+    
+    .package-item p {
+      font-weight: var(--font-weight-medium);
+      color: var(--text-primary);
+      font-size: 0.95rem;
+    }
+    
+    .package-disclaimer {
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      font-style: italic;
+    }
+    
+    /* Dashboard Benefits */
+    .dashboard-mockup {
+      background: var(--bg-dark);
+      padding: var(--space-xl);
+      border-radius: var(--radius-xl);
+      border: 2px solid var(--border-color);
+      margin-bottom: var(--space-xl);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .dashboard-header {
+      display: flex;
+      gap: 8px;
+      margin-bottom: var(--space-md);
+    }
+    
+    .dashboard-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+    
+    .dashboard-dot.red { background: #FF5F57; }
+    .dashboard-dot.yellow { background: #FFBD2E; }
+    .dashboard-dot.green { background: #28CA42; }
+    
+    .dashboard-content {
+      background: rgba(255, 255, 255, 0.05);
+      padding: var(--space-lg);
+      border-radius: var(--radius-md);
+      color: var(--color-white);
+    }
+    
+    .dashboard-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: var(--space-md);
+    }
+    
+    .stat-box {
+      padding: var(--space-md);
+      background: rgba(212, 175, 55, 0.1);
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+    
+    .stat-label {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: var(--space-xs);
+    }
+    
+    .stat-value {
+      font-size: 1.5rem;
+      font-weight: var(--font-weight-bold);
+      color: var(--color-gold);
+    }
+    
+    .features-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-md);
+    }
+    
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm);
+      background: var(--bg-secondary);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    
+    .feature-check {
+      width: 24px;
+      height: 24px;
+      background: var(--color-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    
+    .feature-check svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--color-white);
+    }
+    
+    .feature-item span {
+      font-weight: var(--font-weight-medium);
+      color: var(--text-primary);
+    }
+    
+    /* Testimonials */
+    .testimonials-carousel {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .testimonial {
+      display: none;
+      background: var(--bg-secondary);
+      padding: var(--space-xl);
+      border-radius: var(--radius-lg);
+      border: 2px solid var(--border-color);
+      text-align: center;
+    }
+    
+    .testimonial.active {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .stars {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      margin-bottom: var(--space-md);
+    }
+    
+    .star {
+      width: 20px;
+      height: 20px;
+      fill: var(--color-gold);
+    }
+    
+    .testimonial-quote {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: var(--text-primary);
+      margin-bottom: var(--space-lg);
+      font-style: italic;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-md);
+    }
+    
+    .author-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-green) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-white);
+      font-weight: var(--font-weight-bold);
+      font-size: 1.125rem;
+    }
+    
+    .author-info {
+      text-align: left;
+    }
+    
+    .author-name {
+      font-weight: var(--font-weight-semibold);
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+    
+    .author-title {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+    
+    .carousel-controls {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-sm);
+      margin-top: var(--space-lg);
+    }
+    
+    .carousel-btn {
+      width: 40px;
+      height: 40px;
+      border: 2px solid var(--color-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition-fast);
+    }
+    
+    .carousel-btn:hover {
+      background: var(--color-gold);
+      transform: scale(1.1);
+    }
+    
+    .carousel-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--color-gold);
+      transition: fill var(--transition-fast);
+    }
+    
+    .carousel-btn:hover svg {
+      fill: var(--color-white);
+    }
+    
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-xs);
+      margin-top: var(--space-md);
+    }
+    
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--border-color);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    
+    .dot.active {
+      background: var(--color-gold);
+      width: 24px;
+      border-radius: 5px;
+    }
+    
+    /* Pricing Section */
+    .pricing-card {
+      max-width: 500px;
+      margin: 0 auto;
+      background: var(--bg-secondary);
+      padding: var(--space-2xl);
+      border-radius: var(--radius-xl);
+      border: 3px solid var(--color-gold);
+      box-shadow: var(--shadow-gold);
+      text-align: center;
+    }
+    
+    .pricing-badge {
+      display: inline-block;
+      background: var(--color-gold);
+      color: var(--color-white);
+      padding: var(--space-xs) var(--space-md);
+      border-radius: var(--radius-full);
+      font-size: 0.875rem;
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: var(--space-md);
+    }
+    
+    .price-main {
+      font-size: 3rem;
+      font-weight: var(--font-weight-bold);
+      color: var(--color-gold);
+      margin-bottom: var(--space-xs);
+    }
+    
+    .price-period {
+      color: var(--text-secondary);
+      margin-bottom: var(--space-lg);
+    }
+    
+    .price-details {
+      background: var(--color-gray-subtle);
+      padding: var(--space-md);
+      border-radius: var(--radius-md);
+      margin-bottom: var(--space-lg);
+    }
+    
+    .price-detail {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--space-xs) 0;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+    }
+    
+    .price-detail:not(:last-child) {
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: var(--space-xs);
+    }
+    
+    .price-detail strong {
+      color: var(--color-gold);
+    }
+    
+    .pricing-guarantee {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-xs);
+      margin-top: var(--space-md);
+      color: var(--color-green);
+      font-weight: var(--font-weight-medium);
+    }
+    
+    .pricing-guarantee svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--color-green);
+    }
+    
+    /* Company Info */
+    .company-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .company-description {
+      font-size: 1.125rem;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: var(--space-xl);
+    }
+    
+    .certifications {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-lg);
+      flex-wrap: wrap;
+      margin-bottom: var(--space-xl);
+    }
+    
+    .cert-badge {
+      padding: var(--space-md) var(--space-lg);
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid var(--color-gold);
+      border-radius: var(--radius-md);
+      color: var(--color-white);
+      font-weight: var(--font-weight-semibold);
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+    
+    .cert-badge svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--color-gold);
+    }
+    
+    .media-mentions {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-xl);
+      flex-wrap: wrap;
+    }
+    
+    .media-logo {
+      font-size: 1.5rem;
+      font-weight: var(--font-weight-bold);
+      color: rgba(255, 255, 255, 0.6);
+      letter-spacing: 2px;
+    }
+    
+    /* FAQ Section */
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .faq-item {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      margin-bottom: var(--space-sm);
+      overflow: hidden;
+    }
+    
+    .faq-question {
+      width: 100%;
+      padding: var(--space-md);
+      text-align: left;
+      font-size: 1.0625rem;
+      font-weight: var(--font-weight-semibold);
+      color: var(--text-primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    
+    .faq-question:hover {
+      background: var(--color-gray-subtle);
+    }
+    
+    .faq-icon {
+      width: 24px;
+      height: 24px;
+      fill: var(--color-gold);
+      transition: transform var(--transition-normal);
+      flex-shrink: 0;
+    }
+    
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+    
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--transition-normal) ease;
+    }
+    
+    .faq-answer-content {
+      padding: 0 var(--space-md) var(--space-md);
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+    
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--bg-dark);
+      color: rgba(255, 255, 255, 0.8);
+      padding: var(--space-3xl) 0 var(--space-md);
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-xl);
+      margin-bottom: var(--space-2xl);
+    }
+    
+    .footer-column h4 {
+      color: var(--color-white);
+      font-size: 1.125rem;
+      margin-bottom: var(--space-md);
+      font-weight: var(--font-weight-semibold);
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: var(--space-xs);
+    }
+    
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      transition: color var(--transition-fast);
+    }
+    
+    .footer-links a:hover {
+      color: var(--color-gold);
+    }
+    
+    .footer-divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.1);
+      margin: var(--space-xl) 0;
+    }
+    
+    .download-button {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      background: var(--color-gold);
+      color: var(--color-white);
+      padding: 1rem 2rem;
+      border-radius: var(--radius-lg);
+      font-size: 1.0625rem;
+      font-weight: var(--font-weight-semibold);
+      transition: all var(--transition-normal);
+      box-shadow: var(--shadow-gold);
+    }
+    
+    .download-button:hover {
+      background: var(--color-gold-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
+    }
+    
+    .download-button svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--color-white);
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: var(--space-lg);
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.875rem;
+    }
+    
+    .footer-trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-lg);
+      flex-wrap: wrap;
+      margin-bottom: var(--space-lg);
+    }
+    
+    .footer-trust-badge {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+    
+    /* Responsive Design */
+    @media (min-width: 768px) {
+      .nav {
+        display: flex;
+      }
+      
+      .mobile-menu-toggle {
+        display: none;
+      }
+      
+      .hero h1 {
+        font-size: 3.5rem;
+      }
+      
+      .section-title {
+        font-size: 2.75rem;
+      }
+      
+      .value-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .value-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      
+      .user-types {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    /* Accessibility */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    
+    :focus-visible {
+      outline: 2px solid var(--color-gold);
+      outline-offset: 2px;
+    }
+    
+    /* Loading animation for download */
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    .downloading {
+      pointer-events: none;
+      opacity: 0.7;
+    }
+    
+    .downloading svg {
+      animation: spin 1s linear infinite;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="#" class="logo">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 7L12 12L22 7L12 2Z" />
+            <path d="M2 17L12 22L22 17" />
+            <path d="M2 12L12 17L22 12" />
+          </svg>
+          EasyGold24
+        </a>
+        
+        <nav class="nav">
+          <a href="#programm">Program</a>
+          <a href="#verdienst">Commission Structure</a>
+          <a href="#partner">Partners</a>
+          <a href="#paket">Package</a>
+          <a href="#faq">FAQs</a>
+        </nav>
+        
+        <div class="header-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <svg id="themeIcon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          
+          <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+      
+      <nav class="mobile-menu" id="mobileMenu">
+        <a href="#programm">Program</a>
+        <a href="#verdienst">Commission Structure</a>
+        <a href="#partner">Partners</a>
+        <a href="#paket">Package</a>
+        <a href="#faq">FAQs</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Earn Long-Term with Gold – Risk-Free &amp; From Home</h1>
+        <div class="hero-highlight">
+          Instant Payouts • Lucrative Commissions • Try Free for 90 Days
+        </div>
+        <p class="hero-subtitle">
+          Join Germany's leading gold affiliate program and build a stable passive income stream.
+        </p>
+        <a href="#pricing" class="cta-button">Try Free for 90 Days</a>
+        
+        <div class="trust-badges">
+          <div class="badge">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Trusted by ntv
+          </div>
+          <div class="badge">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Trusted by Stern
+          </div>
+          <div class="badge">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            DIQP Certified
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Proposition Section -->
+  <section class="section" id="programm">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Why EasyGold24?</h2>
+        <p class="section-description">
+          Our affiliate program offers everything you need for a successful passive income.
+        </p>
+      </div>
+      
+      <div class="value-grid">
+        <div class="value-card">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Instant Payouts</h3>
+          <p>Get paid immediately for every referral you make. No waiting periods, no hidden conditions.</p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Lucrative Commissions</h3>
+          <p>Up to 8% commissions on Level 1 plus multi-level earnings on additional levels.</p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M7 8h10M7 12h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Everything Provided</h3>
+          <p>Complete marketing materials, landing pages, and support – everything included and ready to use.</p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="8" r="3" stroke="currentColor" stroke-width="2"/>
+              <circle cx="5" cy="16" r="2" stroke="currentColor" stroke-width="2"/>
+              <circle cx="19" cy="16" r="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 11v3m0 0l-5 2m5-2l5 2" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Build Your Network</h3>
+          <p>Create your own passive income distribution system and profit from multi-level commissions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-description" style="color: rgba(255, 255, 255, 0.8);">
+          Three proven ways to earn money with EasyGold24.
+        </p>
+      </div>
+      
+      <div class="user-types">
+        <div class="user-type-card">
+          <div class="user-type-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 22V12h6v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Retail Shop Owners</h3>
+          <p>Install a gold shop in your business and earn through gold accounts. Perfect for local businesses.</p>
+        </div>
+        
+        <div class="user-type-card">
+          <div class="user-type-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+              <path d="M2 12h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Website Owners / SEO Experts</h3>
+          <p>Place affiliate banners on your website and profit from high commissions through online traffic.</p>
+        </div>
+        
+        <div class="user-type-card">
+          <div class="user-type-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Sales Professionals</h3>
+          <p>Build your own distribution team and earn multi-level income through your growing network.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Commission Structure Section -->
+  <section class="section section-light" id="verdienst">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Commission Structure</h2>
+        <p class="section-description">
+          More Performance = More Revenue. Our transparent multi-level commission system.
+        </p>
+      </div>
+      
+      <div class="commission-pyramid">
+        <div class="commission-level recruiting">
+          <div class="commission-label">
+            <div style="font-size: 0.875rem; opacity: 0.9;">Recruitment Bonus</div>
+            <div class="commission-percentage">30%</div>
+            <div style="font-size: 0.875rem; opacity: 0.9;">Per Partner</div>
+          </div>
+        </div>
+        
+        <div class="commission-level level-1">
+          <div class="commission-label">
+            <div>Level 1</div>
+            <div class="commission-percentage">8%</div>
+          </div>
+        </div>
+        
+        <div class="commission-level level-2">
+          <div class="commission-label">
+            <div>Level 2</div>
+            <div class="commission-percentage">3%</div>
+          </div>
+        </div>
+        
+        <div class="commission-level level-3">
+          <div class="commission-label">
+            <div>Level 3-4</div>
+            <div class="commission-percentage">1%</div>
+          </div>
+        </div>
+        
+        <div class="commission-level level-5">
+          <div class="commission-label">
+            <div>Level 5+</div>
+            <div class="commission-percentage">0,5%</div>
+          </div>
+        </div>
+      </div>
+      
+      <p class="commission-note">
+        The more partners you recruit and the larger your network grows, the higher your passive income.
+      </p>
+    </div>
+  </section>
+
+  <!-- Starter Package Section -->
+  <section class="section" id="paket">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Free in Starter Package</h2>
+        <p class="section-description">
+          Everything you need for a successful start – professional and ready to use immediately.
+        </p>
+      </div>
+      
+      <div class="package-grid">
+        <div class="package-item">
+          <div class="package-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p>10 Flyers</p>
+        </div>
+        
+        <div class="package-item">
+          <div class="package-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <p>1 Brochure</p>
+        </div>
+        
+        <div class="package-item">
+          <div class="package-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="5" y="2" width="14" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M9 6h6M9 10h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <p>1 Notepad</p>
+        </div>
+        
+        <div class="package-item">
+          <div class="package-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2v11z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p>1 Presentation Folder</p>
+        </div>
+        
+        <div class="package-item">
+          <div class="package-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 12v6a2 2 0 01-2 2H6a2 2 0 01-2-2v-6M4 8h16M12 2v12m0 0l3-3m-3 3l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p>2 Gold Bar Chocolates</p>
+        </div>
+        
+        <div class="package-item">
+          <div class="package-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="7" y="6" width="10" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 6V3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <p>1 Gold Bar USB Stick</p>
+        </div>
+        
+        <div class="package-item">
+          <div class="package-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="5" y="2" width="14" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 18h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <p>1 LED Power Bank</p>
+        </div>
+        
+        <div class="package-item">
+          <div class="package-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+              <path d="M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <p>10 Premium Candies</p>
+        </div>
+        
+        <div class="package-item">
+          <div class="package-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 3l4 4-4 4M3 11h18M7 21l-4-4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p>1 Premium Pen</p>
+        </div>
+        
+        <div class="package-item">
+          <div class="package-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M7 7h10v10H7z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <p>5 Banner Materials</p>
+        </div>
+      </div>
+      
+      <p class="package-disclaimer">
+        Free only with annual membership
+      </p>
+    </div>
+  </section>
+
+  <!-- Dashboard Benefits Section -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Your Personal Dashboard</h2>
+        <p class="section-description">
+          Manage your affiliate business with professional tools and real-time tracking.
+        </p>
+      </div>
+      
+      <div class="dashboard-mockup">
+        <div class="dashboard-header">
+          <div class="dashboard-dot red"></div>
+          <div class="dashboard-dot yellow"></div>
+          <div class="dashboard-dot green"></div>
+        </div>
+        <div class="dashboard-content">
+          <div class="dashboard-stats">
+            <div class="stat-box">
+              <div class="stat-label">Total Earnings</div>
+              <div class="stat-value">€4.567</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-label">Active Partners</div>
+              <div class="stat-value">23</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-label">This Month</div>
+              <div class="stat-value">€892</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-label">Conversion Rate</div>
+              <div class="stat-value">4,2%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="features-list">
+        <div class="feature-item">
+          <div class="feature-check">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span>Real-Time Earnings Tracking</span>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span>Personal Landing Page</span>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span>Professional Marketing Materials</span>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span>24/7 Support and Updates</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section" id="partner">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">What Our Partners Say</h2>
+        <p class="section-description">
+          Over 500 satisfied partners are already earning with EasyGold24.
+        </p>
+      </div>
+      
+      <div class="testimonials-carousel">
+        <div class="testimonial active" data-index="0">
+          <div class="stars">
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <p class="testimonial-quote">
+            "Fast processing and excellent service! I'm already earning very well after 3 months."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">M</div>
+            <div class="author-info">
+              <div class="author-name">Michael R.</div>
+              <div class="author-title">Shop Owner, Munich</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial" data-index="1">
+          <div class="stars">
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <p class="testimonial-quote">
+            "Professional, fair commissions, and excellent support. Highly recommended!"
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">S</div>
+            <div class="author-info">
+              <div class="author-name">Sarah K.</div>
+              <div class="author-title">SEO Expert, Berlin</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial" data-index="2">
+          <div class="stars">
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <p class="testimonial-quote">
+            "The best passive income model I've ever seen. Simple and transparent!"
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">T</div>
+            <div class="author-info">
+              <div class="author-name">Thomas M.</div>
+              <div class="author-title">Sales Professional, Cologne</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial" data-index="3">
+          <div class="stars">
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <p class="testimonial-quote">
+            "No hidden fees, everything free in the starter package. Really impressive!"
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">A</div>
+            <div class="author-info">
+              <div class="author-name">Anna L.</div>
+              <div class="author-title">Entrepreneur, Hamburg</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial" data-index="4">
+          <div class="stars">
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <p class="testimonial-quote">
+            "I'm already earning more than my previous job. Clear recommendation!"
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">F</div>
+            <div class="author-info">
+              <div class="author-name">Frank W.</div>
+              <div class="author-title">Side Business, Frankfurt</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="prevBtn" aria-label="Previous testimonial">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="carousel-btn" id="nextBtn" aria-label="Next testimonial">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="section section-light" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Pricing</h2>
+        <p class="section-description">
+          Transparent, fair, and risk-free. Start your gold affiliate business today.
+        </p>
+      </div>
+      
+      <div class="pricing-card">
+        <div class="pricing-badge">Try FREE for 90 Days</div>
+        <div class="price-main">€119</div>
+        <div class="price-period">per year (equals €9.91/month)</div>
+        
+        <div class="price-details">
+          <div class="price-detail">
+            <span>First Payment:</span>
+            <strong>€179</strong>
+          </div>
+          <div class="price-detail">
+            <span>Annual Renewal:</span>
+            <strong>€119</strong>
+          </div>
+          <div class="price-detail">
+            <span>Minimum Term:</span>
+            <strong>1 Year</strong>
+          </div>
+        </div>
+        
+        <a href="https://easygold24.com/verkaufsseite/#aff=rpamzvirtualassistance&cam=CAMPAIGNKEY" class="cta-button">Start Now - Try Free for 90 Days</a>
+        
+        <div class="pricing-guarantee">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          30-Day Money-Back Guarantee
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Info Section -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">About EasyGold24</h2>
+      </div>
+      
+      <div class="company-content">
+        <p class="company-description">
+          Hartmann &amp; Benz GmbH is a trusted European gold trading company with years of experience. We provide entrepreneurs the opportunity to build passive income streams through our innovative affiliate program.
+        </p>
+        
+        <div class="certifications">
+          <div class="cert-badge">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            DIQP Certified
+          </div>
+          <div class="cert-badge">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            European Gold Trading Company
+          </div>
+        </div>
+        
+        <div class="media-mentions">
+          <div class="media-logo">NTV</div>
+          <div class="media-logo">STERN</div>
+          <div class="media-logo">DIE WELT</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-description">
+          Everything you need to know about our affiliate program.
+        </p>
+      </div>
+      
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How quickly can I start earning commissions?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              You can start earning commissions immediately after registration with your first referral. Payments are transferred instantly to your account.
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Are there any hidden fees?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              No hidden fees. The annual membership is €119 (€179 for first payment). All materials are included free in the starter package. Complete transparency.
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does the affiliate program work?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              You receive a personal dashboard, professional marketing materials, and a landing page. You promote EasyGold24 to your network and earn commissions on multiple levels.
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can I cancel anytime?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Yes, there's a 1-year minimum commitment. After that, you can cancel anytime. Plus, we offer a 30-day money-back guarantee.
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What are the exact commission rates?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Level 1: 8%, Level 2: 3%, Level 3-4: 1%, Level 5+: 0.5%. Plus a 30% recruitment bonus for each partner you refer.
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What's included in the starter package?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              The starter package includes 10 flyers, 1 brochure, 1 notepad, 1 presentation folder, 2 gold bar chocolates, 1 USB stick, 1 LED power bank, 10 premium candies, 1 premium pen, and 5 banner materials.
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is this really risk-free?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Yes. You pay €179 for the first year (then €119/year). If you're not satisfied, you get your money back within 30 days. After the first year, cancel anytime with no penalties.
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Who can join the program?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Anyone interested in earning passive income can join – shop owners, website owners, SEO experts, sales professionals, or entrepreneurs. No prior experience necessary.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#programm">Program</a></li>
+            <li><a href="#verdienst">Commission Structure</a></li>
+            <li><a href="#partner">Partners</a></li>
+            <li><a href="#paket">Package</a></li>
+            <li><a href="#faq">FAQs</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Imprint</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">Right of Withdrawal</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:info@easygold24.com">info@easygold24.com</a></li>
+            <li><a href="tel:+49123456789">+49 (0) 123 456789</a></li>
+            <li>Hartmann &amp; Benz GmbH</li>
+            <li>Musterstraße 123, 12345 Berlin</li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Follow Us</h4>
+          <ul class="footer-links">
+            <li><a href="#" target="_blank">LinkedIn</a></li>
+            <li><a href="#" target="_blank">Facebook</a></li>
+            <li><a href="#" target="_blank">Instagram</a></li>
+            <li><a href="#" target="_blank">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-divider"></div>
+      
+      <div class="footer-trust-badges">
+        <div class="footer-trust-badge">Trusted by ntv</div>
+        <div class="footer-trust-badge">Trusted by Stern</div>
+        <div class="footer-trust-badge">DIQP Certified</div>
+        <div class="footer-trust-badge">European Gold Trading Company</div>
+      </div>
+      
+      <div class="footer-bottom">
+        &copy; 2025 Hartmann &amp; Benz GmbH - EasyGold24. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const html = document.documentElement;
+    
+    // Check for saved theme preference or default to system preference
+    const savedTheme = (() => {
+      try {
+        return null; // Don't use localStorage in sandboxed environment
+      } catch (e) {
+        return null;
+      }
+    })();
+    
+    let currentTheme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    
+    // Apply theme on page load
+    if (currentTheme === 'dark') {
+      html.setAttribute('data-color-scheme', 'dark');
+      updateThemeIcon('dark');
+    } else {
+      html.setAttribute('data-color-scheme', 'light');
+      updateThemeIcon('light');
+    }
+    
+    function updateThemeIcon(theme) {
+      if (theme === 'dark') {
+        themeIcon.innerHTML = '<path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+      } else {
+        themeIcon.innerHTML = '<path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+      }
+    }
+    
+    themeToggle.addEventListener('click', () => {
+      currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-color-scheme', currentTheme);
+      updateThemeIcon(currentTheme);
+    });
+    
+    // Mobile Menu Toggle
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    mobileMenuToggle.addEventListener('click', () => {
+      mobileMenuToggle.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
+    
+    // Close mobile menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      });
+    });
+    
+    // Header scroll effect
+    const header = document.getElementById('header');
+    let lastScrollY = window.scrollY;
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+    
+    // Testimonials Carousel
+    const testimonials = document.querySelectorAll('.testimonial');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const dotsContainer = document.getElementById('carouselDots');
+    let currentTestimonial = 0;
+    let autoplayInterval;
+    
+    // Create dots
+    testimonials.forEach((_, index) => {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      if (index === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => showTestimonial(index));
+      dotsContainer.appendChild(dot);
+    });
+    
+    const dots = document.querySelectorAll('.dot');
+    
+    function showTestimonial(index) {
+      testimonials[currentTestimonial].classList.remove('active');
+      dots[currentTestimonial].classList.remove('active');
+      
+      currentTestimonial = index;
+      
+      testimonials[currentTestimonial].classList.add('active');
+      dots[currentTestimonial].classList.add('active');
+    }
+    
+    function nextTestimonial() {
+      const next = (currentTestimonial + 1) % testimonials.length;
+      showTestimonial(next);
+    }
+    
+    function prevTestimonial() {
+      const prev = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+      showTestimonial(prev);
+    }
+    
+    prevBtn.addEventListener('click', () => {
+      prevTestimonial();
+      resetAutoplay();
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      nextTestimonial();
+      resetAutoplay();
+    });
+    
+    function startAutoplay() {
+      autoplayInterval = setInterval(nextTestimonial, 5000);
+    }
+    
+    function resetAutoplay() {
+      clearInterval(autoplayInterval);
+      startAutoplay();
+    }
+    
+    startAutoplay();
+    
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Close all FAQ items
+        faqItems.forEach(faq => faq.classList.remove('active'));
+        
+        // Open clicked item if it wasn't active
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && href !== '#pricing') {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            const headerHeight = header.offsetHeight;
+            const targetPosition = target.offsetTop - headerHeight - 20;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    });
+    
+    // Download ZIP functionality
+    const downloadBtn = document.getElementById('downloadBtn');
+    
+    downloadBtn.addEventListener('click', async () => {
+      try {
+        downloadBtn.classList.add('downloading');
+        downloadBtn.innerHTML = `
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 6v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Creating...
+        `;
+        
+        // Get the entire HTML content
+        const htmlContent = document.documentElement.outerHTML;
+        
+        // Create a Blob with the HTML content
+        const blob = new Blob([htmlContent], { type: 'text/html' });
+        
+        // Create download link
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'easygold24-website.html';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        
+        // Reset button
+        setTimeout(() => {
+          downloadBtn.classList.remove('downloading');
+          downloadBtn.innerHTML = `
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Download Project (ZIP)
+          `;
+        }, 1000);
+        
+      } catch (error) {
+        console.error('Download error:', error);
+        downloadBtn.classList.remove('downloading');
+        downloadBtn.innerHTML = `
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Download Project (ZIP)
+        `;
+        alert('Fehler beim Erstellen der Datei. Bitte versuchen Sie es erneut.');
+      }
+    });
+  </script>
+</body>
+</html>
